@@ -1,0 +1,13 @@
+mi_lista = [1.1, 2.2, 3.3, 4.4, 5.5, 1, 2, 3, 4, 5]
+print("Ejercicio 1: Lista con flotantes y enteros")
+print(mi_lista)
+print(mi_lista[0], type(mi_lista[0])) 
+print(mi_lista[1], type(mi_lista[1])) 
+print(mi_lista[2], type(mi_lista[2])) 
+print(mi_lista[3], type(mi_lista[3])) 
+print(mi_lista[4], type(mi_lista[4])) 
+print(mi_lista[5], type(mi_lista[5])) 
+print(mi_lista[6], type(mi_lista[6])) 
+print(mi_lista[7], type(mi_lista[7])) 
+print(mi_lista[8], type(mi_lista[8])) 
+print(mi_lista[9], type(mi_lista[9]))
