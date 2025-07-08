@@ -162,5 +162,5 @@ cadena 2 = cadenas [1][1]
 cadena 3 = cadenas [2][0]
 cadena 4 = cadenas [0][0]
 cadena 5 = cadenas [0][33]
-cadena 0 = cadenas1. title()
+cadena 0 = cadena 1. title()
 print(cadena 0 + "  " + cadena 2 + cadena 3 + " " + cadena 4 + " " cadena 5)

@@ -1,1 +1,7 @@
-! Hola mundo, bienvenido a Phyton study for beguners! aqui comienza una nueva aventura en el mundo de la programacion. !Aprenderemos paso a paso y nos divirtiremis en el camino! estas lis@! empecemos!
+! Hola mundo!!
+
+Bienvenido a Phyton study for beguners! 
+Aqui comienza una nueva aventura en el mundo de la programacion.
+!Aprenderemos paso a paso y nos divirtiremOs en el camino!
+estas lis@?
+Vamos a empezar!
