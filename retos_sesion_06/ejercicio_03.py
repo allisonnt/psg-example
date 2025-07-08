@@ -1,7 +1,19 @@
-print("Tarjeta | Huella | Puerta se abre")
-print("-------------------------------")
+a = True
+b = True
+resultado = (a or b) and not (a and b)
+print(a, "   |", b, "   |", resultado)
 
-for tarjeta in [0, 1]:
-    for huella in [0, 1]:
-        abrir = tarjeta ^ huella  # XOR lógico
-        print(f"   {tarjeta}     |   {huella}    |       {abrir}")
+a = True
+b = False
+resultado = (a or b) and not (a and b)
+print(a, "   |", b, "  |", resultado)
+
+a = False
+b = True
+resultado = (a or b) and not (a and b)
+print(a, "  |", b, "   |", resultado)
+
+a = False
+b = False
+resultado = (a or b) and not (a and b)
+print(a, "  |", b, "  |", resultado)

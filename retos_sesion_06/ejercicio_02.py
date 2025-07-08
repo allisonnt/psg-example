@@ -1,8 +1,19 @@
-def xnor(a, b):
-    return not (a ^ b)  # XOR con ^, luego negamos
+a = True
+b = True
+xnor = (a and b) or (not a and not b)
+print("True xnor True =", xnor)
 
-# Pruebas
-print(xnor(0, 0))  # True
-print(xnor(0, 1))  # False
-print(xnor(1, 0))  # False
-print(xnor(1, 1))  # Tru
+a = True
+b = False
+xnor = (a and b) or (not a and not b)
+print("True xnor False =", xnor)
+
+a = False
+b = True
+xnor = (a and b) or (not a and not b)
+print("False xnor True =", xnor)
+
+a = False
+b = False
+xnor = (a and b) or (not a and not b)
+print("False xnor False =", xnor)
