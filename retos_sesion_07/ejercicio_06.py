@@ -1,23 +1,20 @@
-# EJEMPLO 1
-frase = "   Mario Benedetti   "
-limpia = frase.strip()
-print("Con .strip():", limpia)
+#EJEMPLO 1
+texto = "Hola mundo"
+nuevo_texto = texto.replace("mundo", "Allison")
+print(nuevo_texto)  
 
-# EJEMPLO 2
-poema = "el sur también existe"
-titulo = poema.title()
-print("Con .title():", titulo)
+#EJEMPLO 2 
+nombre = "Allison Tapia"
+print(nombre.startswith("Alli"))  
 
 # EJEMPLO 3
-texto = "Te espero donde siempre"
-posicion = texto.find("donde")
-print("Con .find():", posicion)
+archivo = "documento_final.pdf"
+print(archivo.endswith(".pdf"))  
 
-# EJEMPLO 4
-palabra = "poesia"
-print("Con .isalpha():", palabra.isalpha())
+#EJEMPLO 4
+frase = "PYTHON ES GENIAL"
+print(frase.lower())  
 
 # EJEMPLO 5
-frase = "cuando el corazón habla, la razón calla"
-palabras = frase.split()
-print("Con .split():", palabras)
+mensaje = "banana banana kiwi banana"
+print(mensaje.count("banana"))  
