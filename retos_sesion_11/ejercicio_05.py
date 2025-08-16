@@ -1,42 +1,21 @@
-arca = {
-    "🐶": 2,  
-    "🐱": 2, 
-    "🐯": 2,  
-    "🐵": 2,  
-    "🦄": 0,  
-    "🦒": 1   
-}
+arca = {"🐶": 2, "🐱": 2, "🐯": 2, "🐵": 2, "🦄": 0, "🦒": 1}
 
-print("Arca inicial:", arca)
+arca.update({"🦊": 2, "🐸": 2, "🦅": 2})
 
-arca.update({
-    "🦓": 2, 
-    "🐘": 2,  
-    "🦜": 2   
-})
+print("Animales en el arca:")
+for especie, cantidad in arca.items():
+    print(f"{especie}: {cantidad}")
 
-print("\nArca después de agregar 3 especies más:", arca)
+if "🐲" in arca:
+    print("El dragón 🐲 está en el arca.")
+else:
+    print("El dragón 🐲 NO está en el arca.")
 
-animal_list = []
-
-for animal, count in arca.items():
-    animal_list.extend([animal] * count)
-
-print("\nLista de animales en el arca:", animal_list)
-
-
-dragon_exists = "🐲" in arca
-print("\n¿Existe el dragón 🐲 en el arca?", dragon_exists)
-
-
-arca.pop("🦄", None) 
-
-print("\nArca después de eliminar el unicornio 🦄:", arca)
+arca.pop("🦄", None)  
 
 arca["🦒"] = 2
 
-print("\nArca después de actualizar la jirafa 🦒 cuenta hasta 2:", arca)
+for clave in list(iter(arca.keys())):  # se usa list() porque no se puede modificar directo al iterar
+    arca.pop(clave)
 
-arca.clear()
-
-print("\nArca después del diluvio (debe estar vacía):", arca)
+print("El arca después del diluvio:", arca)
