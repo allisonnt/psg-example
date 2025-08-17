@@ -1,39 +1,32 @@
-print("Inicio calculadora básica")
+print("Inicio Calculadora")
 
-numero1 = float(input("Número 1: "))
-numero2 = float(input("Número 2: "))
-operacion = input("Operación: ")
+# Pedir entrada al usuario
+entrada = input("Operación (numero1, numero2, operación): ")
 
-print("-------------")
+# Separar los datos usando coma
+datos = entrada.split(",")  # ['10', '5', '+']
 
-if operacion == "+":
-    resultado = numero1 + numero2
-    if resultado == int(resultado):
-        print("Resultado:", int(resultado))
-    else:
-        print("Resultado:", resultado)
-elif operacion == "-":
-    resultado = numero1 - numero2
-    if resultado == int(resultado):
-        print("Resultado:", int(resultado))
-    else:
-        print("Resultado:", resultado)
-elif operacion == "*":
-    resultado = numero1 * numero2
-    if resultado == int(resultado):
-        print("Resultado:", int(resultado))
-    else:
-        print("Resultado:", resultado)
-elif operacion == "/":
-    if numero2 != 0:
-        resultado = numero1 / numero2
-        if resultado == int(resultado):
-            print("Resultado:", int(resultado))
+if len(datos) == 3:  # Validar que ingresó 3 elementos
+    num1 = float(datos[0].strip())
+    num2 = float(datos[1].strip())
+    operacion = datos[2].strip()
+
+    if operacion == "+":
+        resultado = num1 + num2
+    elif operacion == "-":
+        resultado = num1 - num2
+    elif operacion == "*":
+        resultado = num1 * num2
+    elif operacion == "/":
+        if num2:  # truthiness para evitar división por 0
+            resultado = num1 / num2
         else:
-            print("Resultado:", resultado)
+            resultado = "Error: División entre 0"
     else:
-        print("Error: No se puede dividir entre cero")
+        resultado = "Operación inválida"
+
+    print("Resultado:", resultado)
 else:
-    print("Operación no válida")
+    print("Entrada incorrecta, debe tener formato: numero1, numero2, operación")
 
 print("Fin")
