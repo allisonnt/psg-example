@@ -8,3 +8,5 @@ for i in range(2, 20):
 
 for numero in lucas:
     print(numero, end=" ")
+
+    
