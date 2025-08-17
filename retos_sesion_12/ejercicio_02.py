@@ -1,10 +1,21 @@
-print("Inicio verificación de acceso")
+print("Inicio Sesión")
 
-usuario_logueado = True  # Cambia a False para probar el mensaje de error
+usuarios = {
+    "admin": "admin123",
+    "user1": "user123",
+    "user2": "user123",
+    "user3": "user123"
+}
 
-if usuario_logueado:
-    print("Acceso concedido a la página web")
+usuario = input("Usuario: ")
+contraseña = input("Contraseña: ")
+
+if usuario in usuarios:               
+    if usuarios[usuario] == contraseña:
+        print("Acceso permitido")
+    else:
+        print("Contraseña incorrecta")
 else:
-    print("Error: Usuario no ha iniciado sesión")
+    print("Usuario no existe")
 
 print("Fin")
