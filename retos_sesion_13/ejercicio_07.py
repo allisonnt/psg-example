@@ -1,8 +1,10 @@
-for numero in range(1, 101):
-    if numero % 5 == 0:
-        if numero % 7 == 0:
-            print("FizzBuzz")
-        else:
-            print("Fizz")
-    elif numero % 7 == 0:
+print("Ejercicio 5")
+for i in range(1, 101):
+    if i % 5 == 0 and i % 7 == 0:
+        print("FizzBuzz")
+    elif i % 5 == 0:
+        print("Fizz")
+    elif i % 7 == 0:
         print("Buzz")
+    else:
+        print(i)
