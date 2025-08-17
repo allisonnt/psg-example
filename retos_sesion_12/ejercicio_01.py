@@ -1,7 +1,5 @@
-print("Inicio Ternario Par o Impar")
-
 numero = int(input("Ingrese un número entero: "))
-resultado = "El número es par" if numero % 2 == 0 else "El número es impar"
-print(resultado)
 
-print("Fin")
+resultado = "Es múltiplo de 5" if numero % 5 == 0 else "No es múltiplo de 5"
+
+print(resultado)
