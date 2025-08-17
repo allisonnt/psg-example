@@ -10,3 +10,5 @@ while len(numeros) < 20:
 
 for numero in numeros:
     print(numero, end=" ")
+
+    
