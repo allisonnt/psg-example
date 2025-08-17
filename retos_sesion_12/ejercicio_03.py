@@ -1,21 +1,20 @@
-print("Inicio Sesión en la App")
+print("Inicio Colección de Autos")
 
-# Definimos usuarios y contraseñas en un diccionario
-usuarios = {
-    "admin": "admin123",
-    "user1": "user123",
-    "user2": "user123",
-    "user3": "user123"
-}
+# Colección de Jhon
+autos_jhon = {"Ferrari", "Lamborghini", "Porsche", "Bugatti", "McLaren"}
 
-# Pedir credenciales al usuario
-nombre = input("Usuario: ")
-contrasena = input("Contraseña: ")
+# Colección de Jess
+autos_jess = {"Ferrari", "Lamborghini", "Tesla", "Ford", "Chevrolet"}
 
-# Verificar si el usuario existe y la contraseña coincide
-if nombre in usuarios and usuarios[nombre] == contrasena:
-    print("Acceso Aprobado")
+print("Autos de Jhon:", autos_jhon)
+print("Autos de Jess:", autos_jess)
+
+# Autos en común (intersección de conjuntos)
+autos_comunes = autos_jhon & autos_jess  # operador "&" es válido en conjuntos
+
+if autos_comunes:  # si el conjunto no está vacío
+    print("Autos en común:", autos_comunes)
 else:
-    print("Acceso Denegado")
+    print("No tienen autos en común")
 
 print("Fin")
