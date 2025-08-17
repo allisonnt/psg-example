@@ -1,5 +1,6 @@
-print("Inicio Sesión")
+print("Inicio Sesión en la App")
 
+# Definimos usuarios y contraseñas en un diccionario
 usuarios = {
     "admin": "admin123",
     "user1": "user123",
@@ -7,15 +8,14 @@ usuarios = {
     "user3": "user123"
 }
 
-usuario = input("Usuario: ")
-contraseña = input("Contraseña: ")
+# Pedir credenciales al usuario
+nombre = input("Usuario: ")
+contrasena = input("Contraseña: ")
 
-if usuario in usuarios:               
-    if usuarios[usuario] == contraseña:
-        print("Acceso permitido")
-    else:
-        print("Contraseña incorrecta")
+# Verificar si el usuario existe y la contraseña coincide
+if nombre in usuarios and usuarios[nombre] == contrasena:
+    print("Acceso Aprobado")
 else:
-    print("Usuario no existe")
+    print("Acceso Denegado")
 
 print("Fin")

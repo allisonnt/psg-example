@@ -1,14 +1,21 @@
-print("Inicio amigos en común")
+print("Inicio Sesión en la App")
 
-amigos_jhon = {'Alice', 'Bob', 'Charlie', 'David', 'Eve'}
-amigos_jess = {'Alice', 'Bob', 'Frank', 'Grace'}
+# Definimos usuarios y contraseñas en un diccionario
+usuarios = {
+    "admin": "admin123",
+    "user1": "user123",
+    "user2": "user123",
+    "user3": "user123"
+}
 
-amigos_comunes = amigos_jhon.intersection(amigos_jess)
+# Pedir credenciales al usuario
+nombre = input("Usuario: ")
+contrasena = input("Contraseña: ")
 
-if amigos_comunes:
-    print("Jhon y Jess tienen amigos en común:")
-    print(amigos_comunes)
+# Verificar si el usuario existe y la contraseña coincide
+if nombre in usuarios and usuarios[nombre] == contrasena:
+    print("Acceso Aprobado")
 else:
-    print("Jhon y Jess no tienen amigos en común")
+    print("Acceso Denegado")
 
 print("Fin")
