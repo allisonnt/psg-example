@@ -1,25 +1,15 @@
-print("Inicio verificación de nombre y gustos musicales")
+print("Inicio Gestión de Contactos")
 
-nombre = input("Ingrese su nombre: ")
-gustos = input("Ingrese sus gustos musicales separados por coma: ")
+contactos = []
 
-if nombre:
-    print("Nombre:", nombre)
+nombre = input("Nombre: ")
+telefono = input("Teléfono: ")
+
+if nombre and len(telefono) == 12:  
+    contactos.append({"Nombre": nombre, "Teléfono": telefono})
+    print("Contacto guardado")
 else:
-    print("Nombre no válido")
+    print("Datos incorrectos")
 
-# Convertir gustos en lista
-lista_gustos = gustos.split(",")
-
-# Limpiar espacios en cada gusto
-for i in range(len(lista_gustos)):
-    lista_gustos[i] = lista_gustos[i].strip()
-
-print("Gustos musicales:", ",".join(lista_gustos))
-
-if 'rock' in lista_gustos:
-    print("Tiene gusto por el rock")
-else:
-    print("No tiene gusto por el rock")
-
+print("Lista de contactos:", contactos)
 print("Fin")
