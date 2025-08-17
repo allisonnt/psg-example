@@ -1,58 +1,37 @@
-tablero = [[" " for _ in range(3)] for _ in range(3)]
+tablero = [[" " for i in range(3)] for j in range(3)]
+turno = "X"
 
-def mostrar_tablero():
-    for fila in tablero:
-        print(fila)
+while True:
+    print("Juega", turno)
+    fila = int(input("Fila 0-2: "))
+    columna = int(input("Columna 0-2: "))
+    
+    if tablero[fila][columna] == " ":
+        tablero[fila][columna] = turno
+    else:
+        print("Casilla ocupada")
+        continue
+    
+    # Mostrar tablero
+    for fila_tablero in tablero:
+        print(fila_tablero)
+    
+    # Revisar ganador simple
+    if (tablero[0][0] == tablero[0][1] == tablero[0][2] != " " or
+        tablero[1][0] == tablero[1][1] == tablero[1][2] != " " or
+        tablero[2][0] == tablero[2][1] == tablero[2][2] != " " or
+        tablero[0][0] == tablero[1][0] == tablero[2][0] != " " or
+        tablero[0][1] == tablero[1][1] == tablero[2][1] != " " or
+        tablero[0][2] == tablero[1][2] == tablero[2][2] != " " or
+        tablero[0][0] == tablero[1][1] == tablero[2][2] != " " or
+        tablero[0][2] == tablero[1][1] == tablero[2][0] != " "):
+        print("¡Gana", turno, "!")
+        break
+    
+    # Cambiar turno
+    if turno == "X":
+        turno = "O"
+    else:
+        turno = "X"
 
-def verificar_ganador(jugador):
-
-    for i in range(3):
-        if tablero[i][0] == tablero[i][1] == tablero[i][2] == jugador:
-            return True
-        if tablero[0][i] == tablero[1][i] == tablero[2][i] == jugador:
-            return True
-
-    if tablero[0][0] == tablero[1][1] == tablero[2][2] == jugador:
-        return True
-    if tablero[0][2] == tablero[1][1] == tablero[2][0] == jugador:
-        return True
-    return False
-
-def tablero_lleno():
-    for fila in tablero:
-        for casilla in fila:
-            if casilla == " ":
-                return False
-    return True
-
-def tres_en_raya():
-    jugador = "X"
-    while True:
-        print("Turno de:", jugador)
-        mostrar_tablero()
         
-        fila = int(input("Ingresa fila (0-2): "))
-        columna = int(input("Ingresa columna (0-2): "))
-        
-        if tablero[fila][columna] != " ":
-            print("Casilla ocupada. Intenta otra vez.")
-            continue
-        
-        tablero[fila][columna] = jugador
-        
-        if verificar_ganador(jugador):
-            mostrar_tablero()
-            print("¡Ganó el jugador:", jugador, "!")
-            break
-        
-        if tablero_lleno():
-            mostrar_tablero()
-            print("¡Empate!")
-            break
-        
-        if jugador == "X":
-            jugador = "O"
-        else:
-            jugador = "X"
-
-tres_en_raya()
